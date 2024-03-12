@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .container
+        .row
+            .col-md-6.offset-md-3
+                h1.text-center Inserimento Dati Stazione
+                form(action="/inserisciDati" method="post")
+                    .form-group
+                        label(for="stazione") Stazione:
+                        select#stazione.form-control(name="stazione")
+                            option(value="Milano") Milano
+                            option(value="Parma") Parma
+                            option(value="Bari") Bari
+                            // Aggiungi altre opzioni per altre stazioni qui
+                    .form-group
+                        label(for="tempMax") Temperatura Massima:
+                        input#tempMax.form-control(type="text" name="tempMax")
+                    .form-group
+                        label(for="tempMin") Temperatura Minima:
+                        input#tempMin.form-control(type="text" name="tempMin")
+                    .form-group
+                        input.btn.btn-primary#inputForm(type="submit" value="Inserisci Dati")

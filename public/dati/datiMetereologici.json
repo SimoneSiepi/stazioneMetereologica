@@ -1,0 +1,15 @@
+[
+    {
+      "nome": "Milano",
+      "dati": [
+        {
+          "temperaturaMassima": 25.5,
+          "temperaturaMinima": 10.2
+        },
+        {
+          "temperaturaMassima": 27.8,
+          "temperaturaMinima": 12.5
+        }
+      ]
+    }
+]

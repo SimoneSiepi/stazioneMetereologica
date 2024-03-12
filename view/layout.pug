@@ -1,0 +1,24 @@
+doctype html
+html(lang="it")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Menu con Bootstrap
+        link(rel="stylesheet", href="asset/style.css")
+        script(src="asset/bootstrap-5.3.2-dist/js/bootstrap.bundle.js")
+    body.d-flex.flex-column.min-vh-100
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href="/") Menu
+            button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            div.collapse.navbar-collapse#navbarNav
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link(href="/formMeteo") inserimento
+                    li.nav-item
+                        a.nav-link(href="#") ripilogo
+        main.flex-grow-1
+            block content
+
+        footer.bg-light.text-center.py-3.mt-auto
+            p.mb-0(class='footer_text') pagina modificata da Simone Fernandez IV
