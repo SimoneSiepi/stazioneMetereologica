@@ -5,14 +5,14 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const port = 3000;
 
-const rottaAsset = path.join(__dirname, "public", "asset");
-const rottaJs = path.join(__dirname, "public", "asset","bootstrap-5.3.2-dist", "js");
+const rottaAsset = path.join(__dirname, "public/");
 
 app.set("view engine", "pug");
 app.set("views", "./view");
 
  
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(rottaAsset));
 
 async function read() {
     try {
