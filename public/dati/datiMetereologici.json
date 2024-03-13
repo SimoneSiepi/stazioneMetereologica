@@ -3,8 +3,21 @@
     "nome": "Milano",
     "dati": [
       {
+        "temperaturaMassima": 23,
+        "temperaturaMinima": 21
+      }
+    ]
+  },
+  {
+    "nome": "Parma",
+    "dati": [
+      {
         "temperaturaMassima": 12,
-        "temperaturaMinima": 4
+        "temperaturaMinima": 21
+      },
+      {
+        "temperaturaMassima": 12,
+        "temperaturaMinima": 23
       }
     ]
   }

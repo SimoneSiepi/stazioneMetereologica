@@ -3,6 +3,7 @@ const app = express();
 const fs = require("fs").promises;
 const bodyParser = require("body-parser");
 const path = require("path");
+const { exit } = require("process");
 const port = 3000;
 
 const rottaAsset = path.join(__dirname, "public/");
@@ -30,9 +31,17 @@ async function read() {
   }
 }
 
+// async function write(datiJson) {
+//   try {
+//     await fs.writeFile(path.join(rottaDati, "datiMetereologici.json"), JSON.stringify(datiJson, null, 2), "utf-8");
+//   } catch (error) {
+//     console.error("Errore durante la scrittura del file:", error);
+//   }
+// }
+
 async function write(datiJson) {
   try {
-    await fs.writeFile(path.join(rottaDati, "datiMetereologici.json"), JSON.stringify(datiJson, null, 2), "utf-8");
+    await fs.writeFile(path.join(rottaDati, "datiMetereologici.json"), JSON.stringify(datiJson, null, 2), 'utf-8');
   } catch (error) {
     console.error("Errore durante la scrittura del file:", error);
   }
@@ -76,6 +85,7 @@ app.post("/inserisciDati", (req, res) => {
     });
   }
   save();
+  res.redirect("/formMeteo");
 });
 
 app.listen(port, () => {
